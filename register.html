@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login — STACKLY</title>
+<link rel="icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="auth-wrap">
+  <div class="auth-visual">
+    <div style="display:flex;justify-content:space-between;align-items:center"><a href="home.html"><img src="/images/logo-dark.webp" alt="STACKLY" style="height:32px;filter:brightness(0) invert(1)"></a><a href="home.html" style="color:#fff;font-size:.9rem;opacity:.9">← Back to home</a></div>
+    <div>
+      <span class="eyebrow" style="color:rgba(255,255,255,.7)">Studio Portal</span>
+      <h1>Welcome back to the drawing table.</h1>
+      <p class="quote" style="margin-top:26px">"Every good building begins the same way — with a walk, a notebook, and a long silence."</p>
+    </div>
+    <p style="opacity:.6;font-size:.82rem">© 2026 STACKLY Studio</p>
+  </div>
+
+  <div class="auth-form-wrap">
+    <div class="auth-topbar">
+      <a href="home.html"><img src="/images/logo-dark.webp" alt="STACKLY"></a>
+      <a href="home.html" class="btn btn-ghost">← Back to home</a>
+    </div>
+    <form class="auth-form" id="authform">
+      <h2>Sign in</h2>
+      <p class="sub">Choose your role and continue to your workspace.</p>
+      <div class="field"><label>Role</label>
+        <select id="role" required><option value="">Select a role…</option><option value="user">User</option><option value="admin">Admin</option></select>
+      </div>
+      <div class="field"><label>First Name</label><input type="text" required placeholder="firstname"></div>
+      <div class="field"><label>Last Name</label><input type="text" required placeholder="lastname"></div>
+      <div class="field"><label>Email</label><input type="email" required placeholder="you@studio.com"></div>
+      <div class="field"><label>Password</label><input type="password" required placeholder="••••••••"></div>
+      <div class="field"><label>Confirm-Password</label><input type="password" required placeholder="••••••••"></div>
+      <div class="meta"><label style="display:flex;gap:8px;align-items:center;letter-spacing:0;text-transform:none"><input type="checkbox" style="width:auto"> Remember me</label><a href="404.html">Forgot password?</a></div>
+      <button type="submit" class="submit">Sign in →</button>
+      <p class="reg">New to the studio? <a href="404.html">Create an account</a></p>
+    </form>
+  </div>
+</div>
+<script src="/js/script.js"></script>
+</body></html>
