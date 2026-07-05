@@ -174,6 +174,62 @@ tbody tr:hover{background:#faf7ef}
     border-top:1px solid #ddd; /* optional separator */
 }
 
+.foot{
+    margin-top:auto;
+    padding:20px 12px;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.profile-card{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:10px;
+    
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:12px;
+    
+}
+
+.profile-card img{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.profile-info{
+    flex:1;
+    min-width:0;
+}
+
+.profile-info h4{
+    margin:0;
+    font-size:14px;
+    color:#fff;
+    font-weight:600;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.profile-info p{
+    margin:3px 0 0;
+    font-size:12px;
+    color:rgba(255,255,255,.7);
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.nav-logo-img{height:34px;width:auto;object-fit:contain;  filter:  brightness(2) invert(2);}
+
+.profile-more{
+    color:rgba(255,255,255,.6);
+    font-size:18px;
+}
+
 </style>
 </head>
 <body>
@@ -181,7 +237,7 @@ tbody tr:hover{background:#faf7ef}
 <div class="dash">
   <aside class="side" id="side">
     <div class="logo">
-      <div><b>STACKLY</b><small>Admin</small></div>
+      <div><img src="/images/logo-dark.webp" class="nav-logo-img" alt="STACKLY" /><small>Admin</small></div>
       <button class="close-btn" id="closeBtn" aria-label="Close">×</button>
     </div>
     <nav id="snav">
@@ -196,8 +252,20 @@ tbody tr:hover{background:#faf7ef}
         <a data-p="settings">⚙ Settings</a>
         <a href="home.html">↩ Logout</a>
     </div>
+    <div class="foot">
+    <a data-p="profile" >
 
-    <a class="profile-link" data-p="profile">◐ Profile</a>
+    <div class="profile-card">
+        <img src="/images/profile.webp" alt="Profile">
+
+        <div class="profile-info">
+            <h4 class="sidebarUserName">Guest</h4>
+            <p class="sidebarUserEmail">guest@email.com</p>
+        </div>
+
+    </div>
+    </a>
+</div>
 </nav>
   </aside>
 
@@ -206,13 +274,14 @@ tbody tr:hover{background:#faf7ef}
       <div class="top-left">
         <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
         <div style="min-width:0">
-          <small class="kicker">Admin Console</small>
+          <!-- <small class="kicker">Admin Console</small> -->
           <h2 id="ptitle">Overview</h2>
         </div>
       </div>
       <div style="display:flex;gap:12px;align-items:center">
-        <span style="color:var(--muted);font-size:.9rem" class="hide-sm">Elin Voss</span>
-        <div class="avatar">EV</div>
+        <span id="toprightprofileadmin">Guest</span>
+        <div class="avatar"><img src="data:image/webp;base64,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" alt="Jane Doe"></div>
+
       </div>
     </div>
 
@@ -561,6 +630,30 @@ function closeSide(){side.classList.remove('open');overlay.classList.remove('ope
 document.getElementById('hamburger').addEventListener('click',openSide);
 document.getElementById('closeBtn').addEventListener('click',closeSide);
 overlay.addEventListener('click',closeSide);
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const userName = localStorage.getItem("userName") || "Guest";
+    const userEmail = localStorage.getItem("userEmail") || "guest@email.com";
+
+    const nameEl = document.getElementsByClassName("sidebarUserName");
+    const emailEl = document.getElementsByClassName("sidebarUserEmail");
+    const toprightprofileEl = document.getElementById('toprightprofileadmin')
+
+
+    if (nameEl) {
+        nameEl.textContent = userName;
+    }
+
+    if (emailEl) {
+        emailEl.textContent = userEmail;
+    }
+    if (toprightprofileEl) {
+      toprightprofileEl.textContent = userName;
+    }
+});
+
+
 </script>
 </body>
 </html>

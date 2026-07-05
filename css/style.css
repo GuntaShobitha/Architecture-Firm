@@ -21,15 +21,17 @@ h1{font-size:clamp(2.6rem,7vw,6rem)}
 h2{font-size:clamp(2rem,4.5vw,3.6rem)}
 h3{font-size:clamp(1.3rem,2vw,1.8rem)}
 p{color:var(--ink-2);line-height:1.65;font-size:1.02rem}
-.container{max-width:1320px;margin:0 auto;padding:0 24px}
+.container{width: 100%; overflow: auto; margin:0 auto;padding:0 24px}
 .eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:26px;height:1px;background:var(--muted)}
+
+
 
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;transition:.4s var(--easing);backdrop-filter:blur(0)}
 .nav.scrolled{background:rgba(245,242,236,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.nav-logo-img{height:34px;width:auto;object-fit:contain}
+.nav-logo-img{height:34px;width:auto;object-fit:contain;  filter:  brightness(2) invert(2);}
 .nav-links{display:flex;gap:34px;align-items:center}
 .nav-links a{font-size:.92rem;position:relative;padding:6px 0;color:var(--ink)}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--ink);transition:width .35s var(--easing)}
@@ -271,11 +273,11 @@ footer h4{color:#fff;font-family:'Inter',sans-serif;font-size:.78rem;letter-spac
   .p-c1,.p-c2,.p-c3,.p-c4{grid-column:span 1}
   .project.tall{grid-row:auto;aspect-ratio:4/5}
   .stats{grid-template-columns:repeat(2,1fr)}
-  .team{grid-template-columns:repeat(2,1fr)}
-  .process{grid-template-columns:1fr 1fr}
+  .team{grid-template-columns:repeat(1,1fr)}
+  .process{grid-template-columns: repeat(1, 1fr)}
   .split{grid-template-columns:1fr}
   .bgrid{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .foot-grid{grid-template-columns:repeat(1, 1fr);gap:30px}
   .feature-blog{grid-template-columns:1fr}
   .feature-blog .body{padding:40px 26px}
   .cinfo{grid-template-columns:1fr}
@@ -413,6 +415,7 @@ section[data-bg-dark] .sec-video::after{background:linear-gradient(180deg,var(--
   .nav-links.open a:nth-child(4){animation-delay:.2s}
   .nav-links.open a:nth-child(5){animation-delay:.25s}
   .nav-links.open a:nth-child(6){animation-delay:.3s}
+  .subscribe-list{display: flex; flex-direction: column; gap: 10px; background: none;}
 }
 @keyframes cineSlideIn{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
 
