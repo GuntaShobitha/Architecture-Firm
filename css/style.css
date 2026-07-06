@@ -197,7 +197,7 @@ footer h4{color:#fff;font-family:'Inter',sans-serif;font-size:.78rem;letter-spac
 
 /* LOGIN PAGE */
 .auth-wrap{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;background:var(--bg)}
-.auth-visual{background:url('/images/hero.webp') center/cover;position:relative;color:#fff;padding:50px;display:flex;flex-direction:column;justify-content:space-between}
+.auth-visual{background:url('../images/hero.webp') center/cover;position:relative;color:#fff;padding:50px;display:flex;flex-direction:column;justify-content:space-between}
 .auth-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(17,17,17,.5),rgba(17,17,17,.85))}
 .auth-visual > *{position:relative;z-index:2}
 .auth-visual h1{color:#fff;max-width:14ch;margin-top:30px;font-size:clamp(2rem,4vw,3.4rem)}
