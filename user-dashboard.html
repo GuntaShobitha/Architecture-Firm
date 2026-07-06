@@ -579,11 +579,11 @@ nav.addEventListener('click',e=>{
 
 // ---------- Messages ----------
 const messages={
-  1:{from:'Kenji Larsen',role:'Lead Architect · Casa Ola',subject:'Casa Ola — revised elevations',date:'Today, 09:42',avatar:'kenji',body:`Hi Jane,\n\nAttached are the revised elevations following our last call. The south-facing openings have been enlarged and we've integrated the pergola shading you requested.\n\nLet me know your thoughts before Thursday so we can proceed with detail drawings.\n\nBest,\nKenji`},
-  2:{from:'Studio Admin',role:'Operations',subject:'Site visit — March 12, 10:00',date:'Yesterday',avatar:'studioadmin',body:`Confirming your site visit on March 12 at 10:00 local time. Meet at the property entrance; the surveyor will be on-site from 09:30.\n\nPlease bring your ID for site access.`},
-  3:{from:'Maya Otieno',role:'Interior Designer · Loft NYC',subject:'Material samples arrived',date:'2 days ago',avatar:'maya',body:`The lime plaster and oak samples arrived at the studio. Do you want to schedule an in-person review, or should I ship a selection to you?`},
-  4:{from:'Finance',role:'Billing',subject:'Payment received — #A-192',date:'4 days ago',avatar:'finance',body:`We have received your payment of € 24,000 for invoice #A-192. Thank you. A receipt has been emailed to you.`},
-  5:{from:'Anna Bergström',role:'Principal · Villa Sø',subject:'Villa Sø — final photography',date:'1 week ago',avatar:'anna',body:`The final photography from the Villa Sø shoot is ready. You'll find high-res files in your Documents folder.`}
+  1:{from:'Kenji Larsen',role:'Lead Architect · Casa Ola',subject:'Casa Ola — revised elevations',date:'Today, 09:42',avatar:'/images/person1.webp',body:`Hi Jane,\n\nAttached are the revised elevations following our last call. The south-facing openings have been enlarged and we've integrated the pergola shading you requested.\n\nLet me know your thoughts before Thursday so we can proceed with detail drawings.\n\nBest,\nKenji`},
+  2:{from:'Studio Admin',role:'Operations',subject:'Site visit — March 12, 10:00',date:'Yesterday',avatar:'/images/person2.webp',body:`Confirming your site visit on March 12 at 10:00 local time. Meet at the property entrance; the surveyor will be on-site from 09:30.\n\nPlease bring your ID for site access.`},
+  3:{from:'Maya Otieno',role:'Interior Designer · Loft NYC',subject:'Material samples arrived',date:'2 days ago',avatar:'/images/person3.webp',body:`The lime plaster and oak samples arrived at the studio. Do you want to schedule an in-person review, or should I ship a selection to you?`},
+  4:{from:'Finance',role:'Billing',subject:'Payment received — #A-192',date:'4 days ago',avatar:'/images/person4.webp',body:`We have received your payment of € 24,000 for invoice #A-192. Thank you. A receipt has been emailed to you.`},
+  5:{from:'Anna Bergström',role:'Principal · Villa Sø',subject:'Villa Sø — final photography',date:'1 week ago',avatar:'/images/person5.webp',body:`The final photography from the Villa Sø shoot is ready. You'll find high-res files in your Documents folder.`}
 };
 const mlist=document.getElementById('mlist');
 const mview=document.getElementById('mview');
@@ -595,7 +595,9 @@ function renderMsg(id){
     <button class="back-to-list" id="backBtn">‹ Back to messages</button>
     <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line)">
       <div style="display:flex;gap:12px;align-items:center;min-width:0">
-        <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;flex-shrink:0"><img src="https://i.pravatar.cc/80?u=${m.avatar}" alt="" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>
+        <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;flex-shrink:0">
+          <img src="${m.avatar}" alt="" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+          </div>
         <div style="min-width:0">
           <h4>${m.subject}</h4>
           <small>${m.from} · ${m.role}</small>
@@ -606,7 +608,7 @@ function renderMsg(id){
     <div class="msg-body">${m.body.replace(/\n/g,'<br>')}</div>
     <div class="reply">
       <input placeholder="Write a reply…">
-      <button class="btn btn-primary" onclick="alert('Reply sent (demo).')">Send</button>
+      <button class="btn btn-primary" onclick="window.location.href='404.html'">Send</button>
     </div>`;
   const backBtn=document.getElementById('backBtn');
   if(backBtn) backBtn.addEventListener('click',()=>msgListEl.classList.remove('show-detail'));
