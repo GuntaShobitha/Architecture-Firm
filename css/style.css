@@ -292,7 +292,7 @@ footer h4{color:#fff;font-family:'Inter',sans-serif;font-size:.78rem;letter-spac
   .side nav{display:flex;gap:6px}
   .side nav a{white-space:nowrap;font-size:.82rem}
   .main{padding:20px}
-  .kpis{grid-template-columns:1fr 1fr}
+  .kpis{grid-template-columns:repeat(1, 1fr)}
   .panels{grid-template-columns:1fr}
   section{padding:80px 0}
 }
